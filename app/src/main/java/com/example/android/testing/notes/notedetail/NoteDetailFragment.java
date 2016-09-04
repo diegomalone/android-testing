@@ -84,38 +84,38 @@ public class NoteDetailFragment extends Fragment implements NoteDetailContract.V
 
     @Override
     public void setProgressIndicator(boolean active) {
-//        if (active) {
-//            mDetailTitle.setText("");
-//            mDetailDescription.setText(getString(R.string.loading));
-//        }
+        if (active) {
+            mDetailTitle.setText("");
+            mDetailDescription.setText(getString(R.string.loading));
+        }
     }
 
     @Override
     public void hideDescription() {
-//        mDetailDescription.setVisibility(View.GONE);
+        mDetailDescription.setVisibility(View.GONE);
     }
 
     @Override
     public void hideTitle() {
-//        mDetailTitle.setVisibility(View.GONE);
+        mDetailTitle.setVisibility(View.GONE);
     }
 
     @Override
     public void showDescription(String description) {
-//        mDetailDescription.setVisibility(View.VISIBLE);
-//        mDetailDescription.setText(description);
+        mDetailDescription.setVisibility(View.VISIBLE);
+        mDetailDescription.setText(description);
     }
 
     @Override
     public void showTitle(String title) {
-//        mDetailTitle.setVisibility(View.VISIBLE);
-//        mDetailTitle.setText(title);
+        mDetailTitle.setVisibility(View.VISIBLE);
+        mDetailTitle.setText(title);
     }
 
     @Override
     public void showImage(String imageUrl) {
-        // The image is loaded in a different thread so in order to UI-test this, an idling resource
-        // is used to specify when the app is idle.
+//         The image is loaded in a different thread so in order to UI-test this, an idling resource
+//         is used to specify when the app is idle.
         EspressoIdlingResource.increment(); // App is busy until further notice.
 
         mDetailImage.setVisibility(View.VISIBLE);
